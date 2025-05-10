@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./images/Logo.png" alt="Logo" class="logo">
+           
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <div class="masuk-ke">
+                <h1>Pendaftaran Akun</h1>
+                <p>Yuk, daftarkan akunmu sekarang juga!</p>
+            </div>
+            <div class="form-group">
+                <div class="nama-lengkap">
+                    <label for ="nama">Nama Lengkap<span class="red-star">*</span></label>
+                    <input type ="text" id="nama" name="nama" required>
+                </div>
+                <div class="email">
+                    <label for ="email">E-Mail<span class="red-star">*</span></label>
+                    <input type ="email" id="email" name="email" required>
+                </div>
+                <div class="jenis-kelamin">
+                    <label for ="jenisKelamin">Jenis Kelamin<span class="red-star">*</span></label>
+                    <select id ="jenisKelamin" name="jenisKelamin" required>
+                        <option value ="Pria">Pria</option>
+                        <option value ="Wanita">Wanita</option> 
+                    </select>       
+                </div>
+                <div class ="phone-group">
+                    <label for ="phone">No. Hp<span class="red-star">*</span></label>
+                    <input type ="number" id="phone" name="phone" required>
+                </div>
+                <div class ="password">
+                    <label for ="password">Kata Sandi<span class="red-star">*</span></label>
+                    <input type ="password" id="password" name="password" required>
+                </div>
+                <div class ="konfirmasi-password">
+                    <label for ="konfirmasiPassword">Konfirmasi Kata Sandi<span class="red-star">*</span></label>
+                    <input type ="password" id="konfirmasiPassword" name="konfirmasiPassword" required>
+                </div>
+                <div class ="forgot-password">
+                    <a href "#">Lupa Password?</a>
+                </div>
+                <button type="submit" class="btn">Daftar</button>
+                <button type="submit" class="btn">Masuk</button>
+                <div class="divider" style="color:#550">atau</div>
+                <button type="button" class="google-btn">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" class="google-logo">
+                    Daftar dengan Google
+                </button>
+            </div>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+        <script>
+          const input = document.querySelector("#phone");
+          window.intlTelInput(input, {
+            loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+          });
+        </script>
+    </main>
+</body>
+</html>
