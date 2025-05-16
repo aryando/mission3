@@ -61,10 +61,6 @@ form {
     margin-top: 2em;
     margin-bottom: 2em;
     gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 h1 {
     text-align: center;
@@ -99,9 +95,9 @@ input[type="password"],
 input[type="text"],
 input[type="number"],
 #jenisKelamin {
-    width: 280px;
-    height: 48px;
-    padding: 10px;
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     box-sizing: border-box;
@@ -111,7 +107,7 @@ input[type="number"],
 }
 .forgot-password {
     text-align: right;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.2px;
@@ -216,8 +212,13 @@ input[type="number"],
 }
 
 .hero-section a {
+    margin :1rem auto;
+    position: relative;
+    top: 2rem;
     text-decoration: none;
     font-weight: 400;
+    text-align: center;
+    background-color: var(--btn-secondary-color);
 }
 
 .btn-cta {
@@ -239,6 +240,9 @@ input[type="number"],
     margin: 0 1rem;
     margin-bottom: 2rem;
     padding: 0rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
 }
 .courses h3 {
     font-size: 1rem;
@@ -282,7 +286,6 @@ nav a{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    margin-bottom: 1rem;
 }
 .course-img {
     width: 82px;
@@ -389,6 +392,7 @@ nav a{
     padding: 10px;
     border: none;
     border-radius: 8px;
+    text-align: center;
 }
 .subscribe button {
     padding: 10px;
@@ -460,3 +464,11 @@ footer {
     color: var(--third-text-color);
     margin-top: 1rem;
 }
+
+/* media query */
+@media (min-width: 1440px) {
+    form {
+        width: 40%;
+        margin: 6rem auto;
+    }
+    }
